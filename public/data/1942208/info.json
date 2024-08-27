@@ -1,0 +1,9 @@
+{
+    "nombre": "Steven Bernal Ortiz",
+    "edad": 22,
+    "carrera": "Tecnología en Desarrollo de Software",
+    "semestre": 3,
+    "gustos": ["Comer", "Cine", "Videojuegos", "Dinero", "Motos"],
+    "noGustos": ["Madrugar"],
+    "foto": "https://lh3.googleusercontent.com/a/ACg8ocLPImaDCDcWAjjAxmWB7qYsXnvcad6CPM7zvoK8y7mj97MHodY=s288-c-no"
+}
