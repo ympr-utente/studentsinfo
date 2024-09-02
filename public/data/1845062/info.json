@@ -1,0 +1,9 @@
+{
+    "nombre": "Steven Murillo hernandez",
+    "edad": 27,
+    "carrera": "Tecnología en Desarrollo de Software",
+    "semestre": 6,
+    "gustos": ["peliculas", "cafe"],
+    "noGustos": ["Madrugar x2"],
+    "foto": "https://lh3.googleusercontent.com/a/ACg8ocJEbEfxzR9OX-9HmR-l_JeBbvdKWrdN7tinG1AcD3-BYST6Kw=s288-c-no"
+}
