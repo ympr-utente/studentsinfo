@@ -1,5 +1,4 @@
 name: Test Red Social
-
 # Este flujo de trabajo se ejecuta cuando se abre una PR o se actualiza
 on:
   pull_request:
@@ -9,7 +8,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -19,11 +17,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '16'
-
     # Instala las dependencias del proyecto
     - name: Install dependencies
       run: npm install
-
     # Corre los tests de Jest
     - name: Run Jest tests
       run: npm run test
