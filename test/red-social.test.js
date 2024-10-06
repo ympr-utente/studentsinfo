@@ -21,21 +21,37 @@ function findJsonFiles(dir, fileList = []) {
   return fileList;
 }
 
-// Función para verificar si un archivo JSON contiene la llave 'red-social'
-function hasRedSocialKey(filePath) {
+// Función para verificar si un archivo JSON contiene las llaves esperadas
+function hasExpectedKeys(filePath) {
   const jsonData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-  return Object.prototype.hasOwnProperty.call(jsonData, "red-social");
+
+  // Llaves que esperamos en cada archivo JSON
+  const expectedKeys = [
+    "nombre",
+    "edad",
+    "carrera",
+    "semestre",
+    "gustos",
+    "noGustos",
+    "foto",
+    "red-social",
+  ];
+
+  // Verificar que cada llave esté presente
+  return expectedKeys.every((key) =>
+    Object.prototype.hasOwnProperty.call(jsonData, key)
+  );
 }
 
 // Test
-describe('Verificar si los archivos JSON contienen la llave "red-social"', () => {
+describe("Verificar si los archivos JSON contienen todas las llaves esperadas", () => {
   const folderPath = path.join(__dirname, "../public/data"); // Ruta a tu carpeta de JSON
   const jsonFiles = findJsonFiles(folderPath); // Buscar todos los archivos JSON
 
   jsonFiles.forEach((file) => {
     test(`Verificar el archivo ${file}`, () => {
-      const result = hasRedSocialKey(file);
-      expect(result).toBe(true); // El test pasará si la llave 'red-social' está presente
+      const result = hasExpectedKeys(file);
+      expect(result).toBe(true); // El test pasará si todas las llaves esperadas están presentes
     });
   });
 });
