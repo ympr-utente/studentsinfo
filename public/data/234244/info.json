@@ -1,0 +1,9 @@
+{
+    "nombre": "Santiago Nuñez",
+    "edad": 20,
+    "carrera": "Desarrollo de software",
+    "semestre": 6,
+    "gustos": ["Futbol", "Dormir", "UFC", "Viajar"],
+    "noGustos": ["Levantarme temprano", "Comida picante"],
+    "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lionel_Messi_WC2022.jpg/464px-Lionel_Messi_WC2022.jpg"
+}

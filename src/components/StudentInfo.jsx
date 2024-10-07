@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form, Col, Row, Container, Card, Alert, Image } from 'react-bootstrap';
+import './styles.css';
 
 function StudentInfo() {
   const [student, setStudent] = useState(null);
@@ -66,6 +67,7 @@ function StudentInfo() {
                     <Card.Text>Semestre: {student.semestre}</Card.Text>
                     <Card.Text>Gustos: {student.gustos.join(', ')}</Card.Text>
                     <Card.Text>No le gusta: {Array.isArray(student.noGustos) && student.noGustos.length > 0 ? student.noGustos.join(', ') : 'Información no disponible'}</Card.Text>
+                    <Card.Text>Red Social: <a className='link' href={student['red-social']} target="_blank" rel="noopener noreferrer">{student['red-social']}</a></Card.Text>
                   </Col>
                 </Row>
               </Card.Body>
